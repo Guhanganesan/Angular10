@@ -1,27 +1,25 @@
-# Myapp
+# Install Angular 
+1. npm -v
+2. node -v
+3. npm install -g @angular/cli
+4. ng new myapp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.7.
+# Lazy Loading
+1. Make a module
+2. Make Components
+3. Use module in lazy loading way
+4. Make Routing 
+5. Make Routing Link
+=> ng g m admin --routing
+=> ng g c admin/login
+=> ng g c admin/list
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
