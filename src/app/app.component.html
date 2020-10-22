@@ -17,5 +17,14 @@
   <h3>Lazy loading component</h3>
   <button (click)="adminLoad()">Admin Loading</button>
   <button (click)="userLoad()">User Loading</button>
+   
+  <h3>Template driven forms</h3>
+  <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
+    <input type="text" name="email" ngModel>
+    <br><br>
+    <input type="password" name="pass" ngModel>
+    <br><br>
+    <button type="submit">submit</button>
+  </form>
 </body>
 </html>

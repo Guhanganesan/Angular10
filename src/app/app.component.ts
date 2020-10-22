@@ -27,5 +27,13 @@ export class AppComponent {
       this.cfr.resolveComponentFactory(UserlistComponent)
     )
   }
+
+  /* Template driven form */
+  onSubmit(formsdata)
+  {
+     console.log(formsdata);
+     console.log(formsdata.email);
+     console.log(formsdata.pass);
+  }
   
 }
