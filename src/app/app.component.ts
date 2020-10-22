@@ -1,5 +1,5 @@
 import { Component, ViewContainerRef, ComponentFactoryResolver } from '@angular/core';
-
+import {FormControl, FormGroup} from '@angular/forms';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,6 +7,12 @@ import { Component, ViewContainerRef, ComponentFactoryResolver } from '@angular/
 })
 export class AppComponent {
   title = 'myapp';
+  loginForm = new FormGroup(
+    {
+      user : new FormControl(''),
+      pass : new FormControl('')
+    }
+  )
   constructor(private vcr:ViewContainerRef, private cfr:ComponentFactoryResolver)
   {
      this.title="Angular10";
@@ -35,5 +41,10 @@ export class AppComponent {
      console.log(formsdata.email);
      console.log(formsdata.pass);
   }
-  
+  /* Collect Reactive forms data*/
+  collectData()
+  {
+    console.log(this.loginForm.value);
+  }
+
 }
