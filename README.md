@@ -240,4 +240,47 @@ export class AppComponent {
   input.ng-invalid{border-left: 4px solid red;}
   input.ng-valid{border-left: 4px solid green;}
   .error{color: red;}
+
+  # Reactive forms
+  1. import reactive form modules
+  2. Make html form
+  3. Define form group
+  4. Get form value
   
+  app.component.html
+   <h3>Reactive forms</h3>
+  <div class="col-sm-6">
+      <form [formGroup]="loginForm" (ngSubmit)="collectData()">
+        <div class="form-group">
+          <label >Email address:</label>
+          <input type="email" class="form-control" name="email" formControlName="email">
+        </div>
+
+        <div class="form-group">
+          <label>Password:</label>
+          <input type="password" class="form-control" name="pass" formControlName="pass">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+  </div>
+
+  app.component.ts
+
+  loginForm = new FormGroup(
+    {
+      user : new FormControl(''),
+      pass : new FormControl('')
+    }
+  )
+   /* Collect Reactive forms data*/
+  collectData()
+  {
+    console.log(this.loginForm.value);
+  }
+
+
+
+
+
+
