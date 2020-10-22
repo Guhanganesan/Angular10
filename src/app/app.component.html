@@ -19,12 +19,38 @@
   <button (click)="userLoad()">User Loading</button>
    
   <h3>Template driven forms</h3>
-  <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
-    <input type="text" name="email" ngModel>
-    <br><br>
-    <input type="password" name="pass" ngModel>
-    <br><br>
-    <button type="submit">submit</button>
-  </form>
+  <div class="col-sm-6">
+    <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
+      <input type="text" class="form-control" name="email" ngModel>
+      <br>
+      <input type="password" class="form-control" name="pass" ngModel>
+      <br>
+      <button type="submit" class="form-control">submit</button>
+    </form>
+  </div>
+
+  <h3>Form Validations</h3>
+ 
+  <div class="col-sm-6">
+    <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)"> 
+      <div class="form-group">
+        <label>Email address</label>
+        <input type="email" #email="ngModel" class="form-control"  name="email" placeholder="Enter email" ngModel required>
+        <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+        <span *ngIf="email.invalid && email.touched" class="error">Email field is required!!</span>
+        {{email.touched}}
+      </div>
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" class="form-control"  name="password" placeholder="Password" ngModel required>
+      </div>
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input">
+        <label class="form-check-label">Check me out</label>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+  
 </body>
 </html>

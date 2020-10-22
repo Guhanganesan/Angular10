@@ -1,0 +1,4 @@
+input{background-color: ghostwhite;}
+input.ng-invalid{border-left: 4px solid red;}
+input.ng-valid{border-left: 4px solid green;}
+.error{color: red;}
