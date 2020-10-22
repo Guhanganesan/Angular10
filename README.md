@@ -24,6 +24,12 @@
 8. 700 bugs has been fixed
 9. ng update @angular/cli @angular/core
 
+# Installing the bootrstap 
+1. ng add @ng-bootstrap/schematics Or
+2. npm install --save bootstrap
+3. Add this "./node_modules/bootstrap/dist/css/bootstrap.css", in styles[] in angular.json
+4. Visit this link https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css 
+   Copy the entire code and paste it in style.css
 
 # Lazy Loading
 1. Make a module
@@ -199,3 +205,39 @@ export class AppComponent {
      console.log(formsdata.email);
      console.log(formsdata.pass);
   }
+
+  # Forms validations
+  1. Add bootstrap forms
+  2. import forms module
+  3. app.component.html
+
+   <h3>Form Validations</h3>
+ 
+  <div class="col-sm-6">
+    <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)"> 
+      <div class="form-group">
+        <label>Email address</label>
+        <input type="email" #email="ngModel" class="form-control"  name="email" placeholder="Enter email" ngModel required>
+        <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+        <span *ngIf="email.invalid && email.touched" class="error">Email field is required!!</span>
+        {{email.touched}}
+      </div>
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" class="form-control"  name="password" placeholder="Password" ngModel required>
+      </div>
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input">
+        <label class="form-check-label">Check me out</label>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+
+  4. app.component.css
+  /*You can right click inspect element to know about classes like invalid, touched, pristine */
+  input{background-color: ghostwhite;}
+  input.ng-invalid{border-left: 4px solid red;}
+  input.ng-valid{border-left: 4px solid green;}
+  .error{color: red;}
+  
