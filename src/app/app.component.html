@@ -8,10 +8,14 @@
 </head>
 <body>
   <h2>Anguar10!</h2>
+  <h3> Lazy loading for routing </h3>
   <ul>
     <ol><a routerLink="admin/login">Login  </a></ol>
     <ol><a routerLink="admin/list">List </a></ol>
   </ul>
   <router-outlet> </router-outlet>
+  <h3>Lazy loading component</h3>
+  <button (click)="adminLoad()">Admin Loading</button>
+  <button (click)="userLoad()">User Loading</button>
 </body>
 </html>
