@@ -5,10 +5,12 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class CountryService {
-
+  // ng g s country
+  // ng g c observable-example 
   employees: any[];  
   private url = '';  
-  private baseUrl = "http://127.0.0.1:5000/api/v1.0/task";//Replace it with your http address and port  
+  private baseUrl = "http://127.0.0.1:5000/api/v1.0/task";
+  //Replace it with your http address and port  
   constructor(public http: HttpClient) {  
   }  
 

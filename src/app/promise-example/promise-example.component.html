@@ -7,12 +7,7 @@
       <h2>  
         Country Name Search  
       </h2> 
-      <input #term type="text" (keyup)="searchCountryUsingPromise(term.value)">  
-      <div>  
-        <li *ngFor="let result of country">  
-          {{result.CountryName}}  
-        </li> 
-      </div>  
+      <input #term type="text" (keyup)="searchCountryUsingPromise(term.value)">    
     </div>  
   </div> 
   

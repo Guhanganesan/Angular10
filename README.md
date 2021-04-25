@@ -6,6 +6,9 @@
 5. cd myapp
 6. ng serve
 
+# Check supporting browsers
+1. npx browserslist
+
 # Angular10 Features
 1. Date range
 2. Strict Mode
@@ -183,7 +186,7 @@ export class AppComponent {
 
 # Template Driven form
 
-1. import form module in app.module
+1. import forms module in app.module
 2. write a html form in app.component.html
 3. Get data in component.ts file
 
@@ -205,6 +208,10 @@ export class AppComponent {
      console.log(formsdata.email);
      console.log(formsdata.pass);
   }
+
+
+
+
 
   # Forms validations
   1. Add bootstrap forms
