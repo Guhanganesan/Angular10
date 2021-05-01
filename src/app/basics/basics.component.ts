@@ -7,7 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BasicsComponent implements OnInit {
 
-  constructor() { }
+  property_enable:boolean = false;
+  constructor() {
+    //property binding
+    setTimeout(()=>{
+        this.property_enable = true;
+    }), 2000
+   }
 
   ngOnInit(): void {
   }
@@ -18,7 +24,5 @@ export class BasicsComponent implements OnInit {
 
   //Data binding => communication between typescript file to html file
   db_name: string = "Guhan Ganesan";
-
-
-
+  
 }
