@@ -11,6 +11,7 @@ export class BasicsComponent implements OnInit {
   event_data: string;
   //Data binding => communication between typescript file to html file
   db_name: string = "Guhan Ganesan";
+  two_way_data: string;
 
   constructor() {
     //property binding
