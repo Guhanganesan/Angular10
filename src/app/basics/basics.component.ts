@@ -8,11 +8,15 @@ import { Component, OnInit } from '@angular/core';
 export class BasicsComponent implements OnInit {
 
   property_enable:boolean = false;
+  event_data: string;
+  //Data binding => communication between typescript file to html file
+  db_name: string = "Guhan Ganesan";
+
   constructor() {
     //property binding
     setTimeout(()=>{
         this.property_enable = true;
-    }), 2000
+    }, 2000);
    }
 
   ngOnInit(): void {
@@ -21,8 +25,15 @@ export class BasicsComponent implements OnInit {
   getStringValue(){
     return "Hello....";
   }
-
-  //Data binding => communication between typescript file to html file
-  db_name: string = "Guhan Ganesan";
   
+  getEventBindingData(){
+    console.log("event is called");
+    this.event_data = "Guhan Ganesan";
+  }
+  
+  getInputEvent(event:any){
+    console.log(event);
+    //this.event_data = event.target.value;
+    this.event_data = (<HTMLInputElement>event.target).value;
+  }
 }

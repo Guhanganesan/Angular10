@@ -7,3 +7,15 @@
 
 <h4>Data Binding</h4>
 <p [innerText]="db_name"></p>
+
+<div>
+    <h4>Event Binding</h4>
+    <button (click)="getEventBindingData()">click</button>
+    <p>{{event_data}}</p>
+
+    <input (input)="getInputEvent($event)">
+    <br>
+</div>
+
+
+
