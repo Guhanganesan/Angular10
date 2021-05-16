@@ -22,7 +22,38 @@
     <!--combined property with event-->
     <input [(ngModel)]="two_way_data"><br>
     <p>{{two_way_data}}</p>
+    <button (click)="getEventBindingData()" [disabled]="two_way_data === 'anbu'">click</button>
 </div>
+
+<div>
+    <h4>Directives</h4>
+    <p>Directives are instruction in the DOM</p>
+    <p [ngStyle]="{'background': isBlue ? 'pink' : 'red'}"> I am an Attribute Directive</p>
+    <p *ngIf="show">I am a Structural Directive</p>
+
+    <div *ngIf="isShow;then content else other_content">Ng IF Else Block...</div>    
+    <ng-template #content>content here...</ng-template>
+    <ng-template #other_content>other content here...</ng-template>
+
+    <ul *ngFor="let item of student_data" type=none>
+        <li>Id: {{item.id}}</li>
+        <li>Name: {{item.name}}</li>
+        <li>Age: {{item.age}}</li>
+        <li>Mobile: {{item.mobile}}</li>
+    </ul>
+
+    <select [(ngModel)]="selectedValue">  
+        <option *ngFor="let item of student_data;" [value]="item.name">{{item.name}}</option>  
+    </select>    
+    <div class='row' [ngSwitch]="selectedValue">  
+        <div *ngSwitchCase="'Anbarasan'">Anbarasan is selected</div>  
+        <div *ngSwitchCase="'Kannan'">Kannan is selected</div>  
+        <div *ngSwitchDefault>Guhan Ganesan is selected</div>  
+    </div>
+</div>
+
+
+<br><br><br>
 
 
 

@@ -418,5 +418,3 @@ export class ObservableExampleComponent {
 
 
 
-
-
