@@ -7,17 +7,22 @@
   <meta name='viewport' content='width=device-width, initial-scale=1'>
 </head>
 <body>
-<!--Interpolation to display the myapp-->
-<h2>{{title}}</h2>
-   
-<!--ngModel directive for gettting user input which is available in the FormsModule-->
-<input type="text" [(ngModel)]="name"><br>
-<h3>Display Name: {{name}}</h3>
+  <div class="container">
+      <!-- Interpolation to display the myapp
+      <h2>{{title}}</h2>
+        
+      ngModel directive for gettting user input which is available in the FormsModule
+      <input type="text" [(ngModel)]="name"><br>
+      <h3>Display Name: {{name}}</h3>
 
-<!-- generate new child component for basics => ng g c basics then call selector for accessing that component-->
-<!-- <app-basics></app-basics> -->
+      generate new child component for basics => ng g c basics then call selector for accessing that component
+      <app-basics></app-basics>
 
-<h3 appMydirective>Touch me to check custom directive</h3>
+      <h3 appMydirective>Touch me to check custom directive</h3> -->
 
+      <h3>Reactive Forms Example</h3>
+      <app-my-reactive-forms></app-my-reactive-forms>
+      
+  </div>
 </body>
 </html>
