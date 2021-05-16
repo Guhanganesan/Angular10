@@ -1,4 +1,4 @@
-import { Component, Directive, ElementRef, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-basics',
@@ -6,9 +6,7 @@ import { Component, Directive, ElementRef, OnInit } from '@angular/core';
   styleUrls: ['./basics.component.css', './test.component.css']
 })
 
-// @Directive({
-//   selector:'[my-directive_selector]'
-// })
+
 export class BasicsComponent implements OnInit {
 
   property_enable:boolean = false;
@@ -17,9 +15,7 @@ export class BasicsComponent implements OnInit {
   db_name: string = "Guhan Ganesan";
   two_way_data: string;
 
-  constructor(
-    private elementRef: ElementRef
-  ) {
+  constructor() {
     //property binding
     setTimeout(()=>{
         this.property_enable = true;
@@ -52,7 +48,7 @@ export class BasicsComponent implements OnInit {
   content: boolean = true;
   other_content: boolean = true;
   selectedValue = "Anbarasan";
-  
+
   student_data : Student[] = [
     {name: "Guhan Ganesan", age : 21, id: 1, mobile: 978767},
     {name: "Anbarasan", age : 22, id: 2, mobile: 956678},

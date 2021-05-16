@@ -5,11 +5,13 @@ import { AppComponent } from './app.component';
 //import new modules from packages
 import{ FormsModule } from '@angular/forms';
 import { BasicsComponent } from './basics/basics.component';
+import { MydirectiveDirective } from './mydirective.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BasicsComponent
+    BasicsComponent,
+    MydirectiveDirective
   ],
   imports: [
     BrowserModule,

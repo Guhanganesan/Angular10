@@ -5,13 +5,18 @@ import { Component} from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
   title = 'Welcome to Angular10!'; //simple property which is used to load/bind on frontend
   name:string;
+
+  ngOnInit() {
+  }
   
 
-  // for installing bootstrap => npm install --save bootstrap@4 
+  //For installing bootstrap => npm install --save bootstrap@4 
   //and update the angular.json config files (location of bootstrap file)
-  
+  // For generating directive => ng generate directive mydirective
+
   
 }
