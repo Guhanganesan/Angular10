@@ -9,13 +9,15 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { BasicsComponent } from './basics/basics.component';
 import { MydirectiveDirective } from './mydirective.directive';
 import { MyReactiveFormsComponent } from './my-reactive-forms/my-reactive-forms.component';
+import { TemplateDrivenFormsComponent } from './template-driven-forms/template-driven-forms.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BasicsComponent,
     MydirectiveDirective,
-    MyReactiveFormsComponent
+    MyReactiveFormsComponent,
+    TemplateDrivenFormsComponent
   ],
   imports: [
     BrowserModule,
