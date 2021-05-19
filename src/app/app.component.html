@@ -22,9 +22,26 @@
 
       <h3>Reactive Forms Example</h3>
       <app-my-reactive-forms></app-my-reactive-forms>
-       -->
+       
       <h3>Template Driven Forms</h3>
       <app-template-driven-forms></app-template-driven-forms>
+      -->
+      
+      <div class="container">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="'/basics'">Basics</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="'/reactive-forms'">Reactive Forms</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="'/template-driven-forms'">Template Driven Forms</a>
+          </li>
+        </ul>
+        <router-outlet>  </router-outlet>
+      </div>
+      
       
   </div>
 </body>

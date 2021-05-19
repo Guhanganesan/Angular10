@@ -2,7 +2,8 @@
    
     <div class="form-group">
         <label for="firstName">First Name</label>
-        <input required minlength="3" maxlength="10" ngModel name="firstName" type="text" #firstName="ngModel"
+        <input required minlength="3" maxlength="10" ngModel name="firstName" type="text" 
+        #firstName="ngModel"
          class="form-control" id="firstName">
         <div class="alert alert-danger" *ngIf="firstName.touched && !firstName.valid">
             <div *ngIf="firstName.errors.required">First Name is required.</div>
