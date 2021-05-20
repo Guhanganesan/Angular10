@@ -16,7 +16,10 @@ export class AppComponent {
 
   //For installing bootstrap => npm install --save bootstrap@4 
   //and update the angular.json config files (location of bootstrap file)
-  // For generating directive => ng generate directive mydirective
-
+  //For generating directive => ng generate directive mydirective
+  //npm install -g json-server
+  //B:\GithubRepo\Angular10\myapp\src\app>json-server --watch server/employee.json
+  
+  
   
 }

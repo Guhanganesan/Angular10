@@ -6,11 +6,16 @@ import { AppRoutingModule } from './app-routing.module';
 //import new modules from packages
 import{ FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
+import { EmployeeService } from './employee.service';
 
 import { BasicsComponent } from './basics/basics.component';
 import { MydirectiveDirective } from './mydirective.directive';
 import { MyReactiveFormsComponent } from './my-reactive-forms/my-reactive-forms.component';
 import { TemplateDrivenFormsComponent } from './template-driven-forms/template-driven-forms.component';
+import { ListEmployeesComponent } from './employees/list-employees/list-employees.component';
+import { CreateEmployeesComponent } from './employees/create-employees/create-employees.component';
 
 @NgModule({
   declarations: [
@@ -18,15 +23,18 @@ import { TemplateDrivenFormsComponent } from './template-driven-forms/template-d
     BasicsComponent,
     MydirectiveDirective,
     MyReactiveFormsComponent,
-    TemplateDrivenFormsComponent
+    TemplateDrivenFormsComponent,
+    ListEmployeesComponent,
+    CreateEmployeesComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [EmployeeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
