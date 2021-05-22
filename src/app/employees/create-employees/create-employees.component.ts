@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms'; 
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Employee } from '../../employee.model';
+import {EmployeeService} from '../../employee.service';
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-create-employees',
@@ -10,8 +12,12 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class CreateEmployeesComponent implements OnInit {
 
   createForm: FormGroup;
+  employee_data: Employee;
+  
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder,
+              private _empService: EmployeeService,
+              private router:Router) { }
 
   ngOnInit(): void {
 
@@ -19,11 +25,14 @@ export class CreateEmployeesComponent implements OnInit {
       name:['', Validators.required],
       city:['', Validators.required],
       gender:['', Validators.required],
-      dept:['', Validators.required]
+      department:['', Validators.required]
     })
   }
-  
+
   onSubmit(){
-    console.log(this.createForm);
+    this._empService.postEmployees(this.createForm.value).subscribe(data=>{
+      console.log(data);
+    })
+    this.router.navigateByUrl('/list-employees');
   }
 }

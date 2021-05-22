@@ -19,7 +19,7 @@ export class AppComponent {
   //For generating directive => ng generate directive mydirective
   //npm install -g json-server
   //B:\GithubRepo\Angular10\myapp\src\app>json-server --watch server/employee.json
-  
+  //ng g interface emploeyee
   
   
 }
