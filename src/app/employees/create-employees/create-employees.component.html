@@ -1,1 +1,23 @@
-<p>create-employees works!</p>
+<form [formGroup]="createForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" class="form-control" formControlName="name" placeholder="Enter Name" id="name">
+    </div>
+    <div class="form-group">
+      <label for="city">City:</label>
+      <input type="text" class="form-control" formControlName="city" placeholder="Enter City" id="city">
+    </div>
+    <div class="form-group">
+        <label for="gender">Gender:</label>
+        <select class="form-control" formControlName="gender" id="gender">
+          <option>Male</option>
+          <option>Female</option>
+          <option>Transgender</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="dept">Department:</label>
+        <input type="text" class="form-control" formControlName="dept" placeholder="Enter Department" id="dept">
+      </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
