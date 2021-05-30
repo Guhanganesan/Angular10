@@ -10,9 +10,18 @@ export class EmployeeService {
         return this.httpClient.get(`${this.API_URL}/employees`);
     }
 
+    getEmployeeById(id: number) {  
+        return this.httpClient.get<Employee>(`${this.API_URL}/employees` + '/' + id);  
+      }  
+
     postEmployees(body:Employee):Observable<any>{
         const headers = { 'content-type': 'application/json'}  
-        const data=JSON.stringify(body);
-        return this.httpClient.post(`${this.API_URL}/employees`, data, {'headers':headers});
+        return this.httpClient.post(`${this.API_URL}/employees`, body, {'headers':headers});
+    }
+
+    updateEmployee(body:any, id:number){
+        const headers = { 'content-type': 'application/json'}
+        console.log(body);
+        return this.httpClient.put(`${this.API_URL}/employees` + '/' + id, body);
     }
 }

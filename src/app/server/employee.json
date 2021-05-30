@@ -1,46 +1,29 @@
 {
   "employees": [
     {
-      "id": 1,
-      "name": "ND",
+      "name": "Guhan Ganesan",
+      "city": "Mumbai",
+      "gender": "Male",
+      "department": "Web",
+      "id": 1
+    },
+    {
+      "name": "Guhan G",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "name": "Guhan Ganesan",
       "city": "Mumbai",
       "gender": "Male",
       "department": "Web"
     },
     {
-      "id": 2,
-      "name": "Joy",
-      "city": "Delhi",
-      "gender": "Male",
-      "department": "DB"
-    },
-    {
-      "id": 3,
-      "name": "Jack",
-      "city": "Kolkata",
-      "gender": "Male",
-      "department": "Web"
-    },
-    {
-      "id": 4,
-      "name": "Guhan",
-      "city": "Chennai",
-      "gender": "Male",
-      "department": "Web"
-    },
-    {
-      "name": "Anbu",
-      "city": "Chennai",
+      "name": "Guhan Ganesan",
+      "city": "Mumbai",
       "gender": "Male",
       "department": "Web",
-      "id": 5
-    },
-    {
-      "name": "GANESAN",
-      "city": "CHENNAI",
-      "gender": "Male",
-      "department": "ECE",
-      "id": 6
+      "id": 4
     }
   ]
 }

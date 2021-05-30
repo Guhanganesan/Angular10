@@ -21,5 +21,4 @@ export class AppComponent {
   //B:\GithubRepo\Angular10\myapp\src\app>json-server --watch server/employee.json
   //ng g interface emploeyee
   
-  
 }

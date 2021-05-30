@@ -1,0 +1,44 @@
+<p>update-employees works!</p>
+<form [formGroup]="updateForm">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>City</th>
+                <th>Gender</th>
+                <th>Department</th>
+            </tr>
+        </thead>
+        <tbody> 
+        <tr>
+            <td>
+                <div class="form-group">
+                        <input type="text" class="form-control" formControlName="id" [(ngModel)]="id" id="id">
+                </div>
+            </td>
+            <td>
+                <div class="form-group">
+                        <input type="text" class="form-control" formControlName="name" [(ngModel)]="name" id="name">
+                </div>
+            </td>
+            <td>
+                <div class="form-group">
+                        <input type="text" class="form-control" formControlName="city" [(ngModel)]="city" id="city">
+                </div>
+            </td>
+            <td>
+                <div class="form-group">
+                        <input type="text" class="form-control" formControlName="gender" [(ngModel)]="gender" id="gender">
+                </div>
+            </td>
+            <td>
+                <div class="form-group">
+                        <input type="text" class="form-control" formControlName="department" [(ngModel)]="department" id="department">
+                </div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <button (click)="updateEmployee()">click</button> 
+</form>

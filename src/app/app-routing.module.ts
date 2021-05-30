@@ -6,6 +6,7 @@ import { MyReactiveFormsComponent } from './my-reactive-forms/my-reactive-forms.
 import { TemplateDrivenFormsComponent } from './template-driven-forms/template-driven-forms.component';
 import { ListEmployeesComponent } from './employees/list-employees/list-employees.component';
 import { CreateEmployeesComponent } from './employees/create-employees/create-employees.component';
+import { UpdateEmployeesComponent } from './employees/update-employees/update-employees.component';
 
 
 const routes: Routes = [
@@ -28,6 +29,10 @@ const routes: Routes = [
     {
       path: 'create-employees',
       component: CreateEmployeesComponent
+    },
+    {
+      path: "update-employees",
+      component: UpdateEmployeesComponent
     }
 ];
 
