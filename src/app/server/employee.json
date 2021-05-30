@@ -9,28 +9,10 @@
     },
     {
       "name": "Guhan G",
+      "city": "Ramanathapuram",
+      "gender": "Male",
+      "department": "Web designing",
       "id": 2
-    },
-    {
-      "id": 3,
-      "name": "Guhan Ganesan",
-      "city": "Mumbai",
-      "gender": "Male",
-      "department": "Web"
-    },
-    {
-      "name": "Guhan Ganesan",
-      "city": "Mumbai",
-      "gender": "Male",
-      "department": "web designing",
-      "id": 4
-    },
-    {
-      "name": "R JAYASRI",
-      "city": "Mumbai",
-      "gender": "Female",
-      "department": "ece",
-      "id": 5
     }
   ]
 }

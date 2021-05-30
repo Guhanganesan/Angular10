@@ -24,4 +24,9 @@ export class EmployeeService {
         console.log(body);
         return this.httpClient.put(`${this.API_URL}/employees` + '/' + id, body);
     }
+
+    deleteEmployee(id:number){
+        console.log(id);
+        return this.httpClient.delete(`${this.API_URL}/employees` + '/' + id);
+    }
 }
