@@ -26,8 +26,11 @@ export class UpdateEmployeesComponent implements OnInit {
     private router:Router) { }
 
 ngOnInit(): void {
+
+
 //list employees from server
-this.getEmployeeById(1);
+console.log(localStorage.getItem('id'));
+this.getEmployeeById(localStorage.getItem('id'));
 
 //update employee form with specific id
 this.updateForm = this.formBuilder.group({
@@ -39,7 +42,7 @@ this.updateForm = this.formBuilder.group({
   })
 }
 
-public getEmployeeById(id:number) {
+public getEmployeeById(id:any) {
   this._empService.getEmployeeById(id).subscribe((data: any) => {
     this.employees = data;
     this.id = this.employees.id;
@@ -60,6 +63,7 @@ updateEmployee(){
     this._empService.updateEmployee(body, this.id).subscribe(data=>{
       console.log(data);
     })
+    this.router.navigateByUrl('/list-employees');
   }
   
 }
