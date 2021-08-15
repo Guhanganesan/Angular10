@@ -7,7 +7,8 @@ import { TemplateDrivenFormsComponent } from './template-driven-forms/template-d
 import { ListEmployeesComponent } from './employees/list-employees/list-employees.component';
 import { CreateEmployeesComponent } from './employees/create-employees/create-employees.component';
 import { UpdateEmployeesComponent } from './employees/update-employees/update-employees.component';
-
+import { ForsmarrayExampleComponent } from './forms/forsmarray-example/forsmarray-example.component';
+import { CostEstimationComponent } from './cost-estimation/cost-estimation.component';
 
 const routes: Routes = [
     {
@@ -33,6 +34,14 @@ const routes: Routes = [
     {
       path: "update-employees",
       component: UpdateEmployeesComponent
+    },
+    {
+      path: "forms-example",
+      component: ForsmarrayExampleComponent
+    },
+    {
+      path: "cost-estimation",
+      component: CostEstimationComponent
     }
 ];
 

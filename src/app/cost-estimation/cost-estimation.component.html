@@ -1,0 +1,100 @@
+<!<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  
+</head>
+<body>
+        <h1>Cost Estimation Form</h1>
+        <div>
+            <form [formGroup]="costEstimationForm">
+                <div >
+                    <label for="user">User Name:</label>
+                    <input type="text" formControlName="user_name" class="form-control" placeholder="Enter user name" id="user_name">
+                </div>
+                <div >
+                    <label for="user_region">Enter Country or State:</label>
+                    <input type="text" class="form-control"  formControlName="user_region" placeholder="Enter contry or state" id="user_region">
+                </div>
+    
+                <div formArrayName="server_details">
+                    <ng-container *ngFor="let server of costEstimationForm.get('server_details')['controls']; let i = index;" 
+                    [formGroupName]="i">
+                        <table >
+                            <tr>
+                                <td>
+                                    <div >
+                                        <label for="server_name">Select Server:</label>
+                                        <select class="form-control" id="server_name" formControlName="server_name">
+                                            <option  *ngFor="let item of server_data" [value]="item">
+                                                {{item}}
+                                            </option>
+                                        </select>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div >
+                                        <label for="server_type">Select Server Type:</label>
+                                        <select class="form-control" id="server_type" formControlName="server_type">
+                                            <option  *ngFor="let item of server_level" [value]="item"> 
+                                                {{item}}
+                                            </option>
+                                        </select>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div >
+                                        <label for="periods">Enter Years</label>
+                                        <input type="text" class="form-control" placeholder="Enter Momory Size" formControlName="periods"
+                                         id="periods">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div >
+                                        <label for="memory_size">Enter Memory Size:</label>
+                                        <input type="text" class="form-control" placeholder="Enter Momory Size" formControlName="memory_size"
+                                         id="memory_size" (blur)="displayCost(i)">
+                                    </div>
+                                </td>
+                                <td>
+                                    <br>
+                                    <h2><a (click)="removeServer(i)" *ngIf="server_details.length>1"><i style="font-size:24px" class="fa">&#xf00d;</i></a></h2>
+                                </td>
+                            </tr>
+                            </table>
+                    </ng-container>
+                
+                    <div> 
+                        <h2><a (click)="addServer()"> <i class="fas fa-plus-square"></i> Add more servers </a></h2> 
+                    </div>
+                </div>
+    
+    
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+
+        <h1>Cost Summary</h1>
+        <h2>User Name: {{costEstimationForm.get('user_name').value}}</h2>
+        <h2>User Region: {{costEstimationForm.get('user_region').value}}</h2>
+        <table>
+            <tr *ngFor="let item of costEstimationForm.get('server_details')['controls']; let i=index;">
+                <td *ngIf="item && server_map">
+                    <h2>Host {{i+1}}</h2>
+                    Server Type: {{item.controls.server_type.value}}<br>
+                    Server Name: {{item.controls.server_name.value}}<br>
+                    Memory Size: {{item.controls.memory_size.value}}<br>
+                    Years: {{item.controls.periods.value}}<br>
+                    Cost: {{server_map.get(item.controls.server_name.value).cost}}
+                </td>
+            </tr>
+        </table>
+</body>
+</html>
+
+

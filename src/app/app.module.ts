@@ -19,6 +19,8 @@ import { TemplateDrivenFormsComponent } from './template-driven-forms/template-d
 import { ListEmployeesComponent } from './employees/list-employees/list-employees.component';
 import { CreateEmployeesComponent } from './employees/create-employees/create-employees.component';
 import { UpdateEmployeesComponent } from './employees/update-employees/update-employees.component';
+import { ForsmarrayExampleComponent } from './forms/forsmarray-example/forsmarray-example.component';
+import { CostEstimationComponent } from './cost-estimation/cost-estimation.component';
 
 
 @NgModule({
@@ -31,6 +33,8 @@ import { UpdateEmployeesComponent } from './employees/update-employees/update-em
     ListEmployeesComponent,
     CreateEmployeesComponent,
     UpdateEmployeesComponent,
+    ForsmarrayExampleComponent,
+    CostEstimationComponent,
   ],
   imports: [
     BrowserModule,
