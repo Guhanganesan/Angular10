@@ -13,6 +13,13 @@
       "gender": "Male",
       "department": "Web designing",
       "id": 2
+    },
+    {
+      "name": "R JAYASRI",
+      "city": "CHENNAI",
+      "gender": "Female",
+      "department": "ECE",
+      "id": 3
     }
   ]
 }

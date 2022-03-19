@@ -21,6 +21,7 @@ import { CreateEmployeesComponent } from './employees/create-employees/create-em
 import { UpdateEmployeesComponent } from './employees/update-employees/update-employees.component';
 import { ForsmarrayExampleComponent } from './forms/forsmarray-example/forsmarray-example.component';
 import { CostEstimationComponent } from './cost-estimation/cost-estimation.component';
+import { EmployeeComponent } from './flask-server/employee/employee.component';
 
 
 @NgModule({
@@ -35,6 +36,7 @@ import { CostEstimationComponent } from './cost-estimation/cost-estimation.compo
     UpdateEmployeesComponent,
     ForsmarrayExampleComponent,
     CostEstimationComponent,
+    EmployeeComponent,
   ],
   imports: [
     BrowserModule,

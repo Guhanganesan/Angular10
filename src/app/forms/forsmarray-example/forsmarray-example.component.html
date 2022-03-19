@@ -1,0 +1,16 @@
+<h2>Forms Array Example</h2>
+<button (click)="addSkills()">Add Skills</button>
+<div *ngFor="let control of skills.controls; index as i">
+    <input [formControl]="skills.controls[i]" />
+    <button (click)="removeSkill(i)">Remove</button>
+</div>
+
+
+<br><br>
+<button (click)="displayDetails()">Display Skills</button>
+<div *ngIf="data.length>0">
+    <ul *ngFor="let item of data">
+        <li>{{item}}</li>
+    </ul>
+</div>
+

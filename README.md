@@ -417,4 +417,8 @@ export class ObservableExampleComponent {
 } 
 
 
+# Material Angular
+
+npm install angular-material
+
 

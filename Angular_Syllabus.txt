@@ -1,0 +1,37 @@
+ECMAScript:
+1. Introduction about ECMAScript
+2. Data Types, Variables, Operators, Decision making
+3. Loopings
+4. Functions
+5. Arrays and relavant methods
+6. String and relavant methods
+7. Date and Math functions
+8. Introduction about OOPS(Classes, Objects, Properties)
+9. OOPS comparison with Typescript
+10. Collections
+11. Maps and Sets
+12. Error Handlings
+13. Modules and Promises
+
+Angular 8:
+
+1. Introduction
+2. Features
+3. Introduction about NodeJS
+4. Installations
+5. Architecture
+6. LifeCycle
+7. First App and Interpolations
+8. Data Binding
+9. Event Binding
+10. Directives and different directives
+11. Pipes and Filters
+12. HTTP and Services
+13. Handling third parties APIs
+14. Routing and Navigations
+15. Forms 
+16. Forms validations
+17. Different forms 
+18. Introduction to JSON server APIs
+19. CRUD using JSON server
+20. Hosting the app in a free hosting server
